@@ -3,6 +3,16 @@ sudo apt install zsh vim git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 sed -e s/ZSH_THEME=.*/ZSH_THEME="agnoster"/g
 
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+
+echo "Please change terminal fonts"
 
 # change to vim
 sudo update-alternatives --config editor
@@ -29,3 +39,5 @@ R -e install.packages(c('RProtoBuf''RCurl','rjson
 echo "github_token:"
 read AUTH_TOKEN
 R -e devtools::install_github(auth_token=$AUTH_TOKEN )
+
+
