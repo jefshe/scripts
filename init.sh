@@ -1,3 +1,7 @@
+ git config --global user.name "jefshe"
+git config --global user.email "jeffrey.shen@displayr.com"
+
+
 sudo apt install zsh vim git
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
