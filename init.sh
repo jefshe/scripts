@@ -1,11 +1,13 @@
- git config --global user.name "jefshe"
-git config --global user.email "jeffrey.shen@displayr.com"
 
 
-sudo apt install zsh vim git
+sudo apt install zsh vim git libssl-dev curl
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 sed -e s/ZSH_THEME=.*/ZSH_THEME="agnoster"/g
+
+git config --global user.name "jefshe"
+git config --global user.email "jeffrey.shen@displayr.com"
+
 
 # clone
 git clone https://github.com/powerline/fonts.git --depth=1
@@ -39,7 +41,7 @@ sudo apt-get install python-dev python-pip python3-dev python3-pip
 
 # R packages
 sudo apt-get install protobuf-compiler libprotobuf-dev libprotoc-dev python-protobuf librsvg2-dev libapparmor-dev apparmor-utils libhiredis-dev libev-dev redis-tools build-essential tcl
-R -e install.packages(c('RProtoBuf''RCurl','rjson
+R -e install.packages(c('RProtoBuf''RCurl','rjson', 'openssl', 'curl', 'g2r'))
 echo "github_token:"
 read AUTH_TOKEN
 R -e devtools::install_github(auth_token=$AUTH_TOKEN )
